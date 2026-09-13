@@ -233,7 +233,7 @@ const Dashboard = ({ userName }) => {
                 <p className="df-empty-subtitle">Check back later for new materials</p>
               </div>
             ) : (
-              uploadedFiles.slice().reverse().map((file) => (
+              uploadedFiles.map((file) => (
                 <div key={file.id} className="df-item">
                   <div className={`df-icon ${getFileIconColor(file.type)}`}>
                     <span className="material-symbols-outlined text-[20px]">{getFileIcon(file.type)}</span>

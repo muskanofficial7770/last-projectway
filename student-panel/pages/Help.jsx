@@ -66,9 +66,6 @@ const Help = ({ userName, projectName }) => {
       <div className="h-card">
         <div className="h-card-inner">
           <div className="h-card-header">
-            <div className="h-icon-container">
-              <span className="material-symbols-outlined h-icon">support_agent</span>
-            </div>
             <div>
               <h2 className="h-card-title">Report an Issue</h2>
               <p className="h-card-description">Describe your problem in detail so the teacher can help you.</p>
