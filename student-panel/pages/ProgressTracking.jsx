@@ -576,26 +576,31 @@ const ProgressTracking = ({
             </h3>
             <div className="pt-progress-circle-wrapper">
               <div className="pt-progress-circle">
-                <svg
-                  className="pt-progress-svg"
-                  viewBox="0 0 36 36"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
+                <svg className="pt-progress-svg" viewBox="0 0 36 36">
+                  {/* Background circle */}
+                  <circle
                     className="pt-progress-bg"
-                    d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                    cx="18"
+                    cy="18"
+                    r="15.9"
                     fill="none"
-                    stroke="currentColor"
+                    stroke="#e5e7eb"
                     strokeWidth="3"
                   />
-                  <path
+
+                  {/* Progress circle */}
+                  <circle
                     className="pt-progress-fg"
-                    strokeDasharray={`${progressPercentage}, 100`}
-                    d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                    cx="18"
+                    cy="18"
+                    r="15.9"
                     fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
+                    stroke="#2563eb"
                     strokeWidth="3"
+                    strokeLinecap="round"
+                    pathLength="100"
+                    strokeDasharray={`${progressPercentage} 100`}
+                    transform="rotate(-90 18 18)"
                   />
                 </svg>
                 <div className="pt-progress-center">
